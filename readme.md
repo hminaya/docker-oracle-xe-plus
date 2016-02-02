@@ -7,7 +7,7 @@ docker pull hminaya/docker-oracle-xe-plus
 
 Run with 22 and 1521 ports opened:
 ```
-docker run -d -p 49160:22 -p 49161:1521 hminaya/docker-oracle-xe-plus
+docker run -d -p 49160:22 -p 49161:1521 -p 49162:8080 hminaya/docker-oracle-xe-plus
 ```
 
 Connect database with following setting:
