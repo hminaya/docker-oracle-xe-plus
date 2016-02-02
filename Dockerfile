@@ -6,7 +6,6 @@ ADD chkconfig /sbin/chkconfig
 ADD init.ora /
 ADD initXETemp.ora /
 
-RUN mkdir /var/lock/subsys
 RUN chmod 755 /sbin/chkconfig
 RUN ln -s /proc/mounts /etc/mtab
 
