@@ -7,7 +7,6 @@ ADD init.ora /
 ADD initXETemp.ora /
 
 RUN chmod 755 /sbin/chkconfig
-RUN ln -s /proc/mounts /etc/mtab
 
 RUN dpkg --install /tmp/oracle-xe_11.2.0-1.0_amd64.deb
 
