@@ -2,19 +2,6 @@ FROM wnameless/oracle-xe-11g
 
 MAINTAINER Hector Minaya <hminaya@gmail.com>
 
-ADD chkconfig /sbin/chkconfig
-ADD init.ora /
-ADD initXETemp.ora /
-
-RUN chmod 755 /sbin/chkconfig
-
-RUN mv /init.ora /u01/app/oracle/product/11.2.0/xe/config/scripts
-RUN mv /initXETemp.ora /u01/app/oracle/product/11.2.0/xe/config/scripts
-
-RUN rm /etc/default/oracle-xe
-
-RUN printf 8080\\n1521\\noracle\\noracle\\ny\\n | /etc/init.d/oracle-xe configure
-
 RUN echo 'export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe' >> /etc/bash.bashrc
 RUN echo 'export PATH=$ORACLE_HOME/bin:$PATH' >> /etc/bash.bashrc
 RUN echo 'export ORACLE_SID=XE' >> /etc/bash.bashrc
