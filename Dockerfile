@@ -1,4 +1,4 @@
-FROM wnameless/xe-temp
+FROM wnameless/oracle-xe-11g
 
 MAINTAINER Hector Minaya <hminaya@gmail.com>
 
